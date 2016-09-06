@@ -1,0 +1,30 @@
+{
+  "name": "dr_dentist",
+  "version": "1.0.0",
+  "description": "Patient Management System",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AjithPanneerselvam/Dr.Dentist.git"
+  },
+  "keywords": [
+    "Dentist"
+  ],
+  "author": "Ajith Panneerselvam <ajithpanneerselvam20@gmail.com> (https://ajithpanneerselvam.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AjithPanneerselvam/Dr.Dentist/issues"
+  },
+  "homepage": "https://github.com/AjithPanneerselvam/Dr.Dentist#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.3.5"
+},
+  "dependencies": {
+    "request-promise": "*",
+    "electron-prebuilt": "*"
+  }
+}
