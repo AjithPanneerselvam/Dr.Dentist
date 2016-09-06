@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+    <title> Dr.Dentist </title>
+
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="./css/materialize.min.css">
+<!--Import Google Icon Font-->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+
+</body>
+<nav>
+  <div class="nav-wrapper">
+    <a style="padding-right:10px" href="index.html" class="brand-logo">Dr.Dentist</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="search.html">Search</a></li>
+      <li><a href = "add.html" >Add</a></li>
+
+
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <!-- <li class="divider"></li> -->
+    <li><a href="#!">three</a></li>
+  </ul>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+
+
+
+
+
+
+  </div>
+</nav>
+
+
+
+<div style="margin-top:10vh"class="container">
+ <div class="row">
+     <form class="col s8" action="./insert" method="post" id="form1">
+       <div class="row">
+         <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+           <input placeholder="" id="first_name" type="text" class="validate">
+           <label class="active" for="first_name">First Name</label>
+         </div>
+         <div class="input-field col s6">
+             <i class="material-icons prefix">account_circle</i>
+           <input id="last_name" type="text" class="validate">
+           <label class="active" for="last_name">Last Name</label>
+         </div>
+       </div>
+
+   </div>
+       <div class="row">
+         <div class="input-field col s8">
+             <i class="material-icons prefix">language</i>
+           <input id="place" type="text" class="validate">
+           <label class="active" for="place">Place</label>
+         </div>
+</div>
+
+       <div class="row">
+         <div class="input-field col s6">
+             <i class="material-icons prefix">phone</i>
+           <input id="contact" type="text" class="validate">
+           <label class="active" for="contact">Contact Number</label>
+       </div>
+       </div>
+
+       <div class="row">
+         <div class="input-field col s6">
+            <i class="material-icons prefix">person_pin</i>
+           <input placeholder="" id="age" type="text" class="validate">
+           <label class="active" for="age">Age: </label>
+         </div>
+</div>
+<div class="row">
+         <div class="input-field col s6">
+             <i class="material-icons prefix">perm_contact_calendar</i>
+             <!-- <label class="active" for="age">Sex: </label> -->
+            <p style="padding-left:10px">
+
+              <input name="group1" type="radio" id="test1" />
+              <label for="test1">Male</label>
+
+
+              <input name="group1" type="radio" id="test2" />
+              <label for="test2">Female</label>
+            </p>
+         </div>
+</div>
+
+       <div class="row">
+         <div class="input-field col s12">
+             <i class="material-icons prefix">class</i>
+           <input id="case" type="text" class="validate">
+           <label class="active" for="case">Case</label>
+       </div>
+       </div>
+
+
+  </div>
+       </div>
+
+</form>
+<br>
+    <div class="row center">
+        <div class="col s12">
+       <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+      </button>
+
+ </div>
+ </div>
+
+
+</div>
+
+
+
+ <!-- Compiled and minified JavaScript -->
+
+
+
+          <script src="./js/materialize.min.js"></script>
+          <script>
+          $('.datepicker').pickadate({
+              selectMonths: true, // Creates a dropdown to control month
+              selectYears: 15 // Creates a dropdown of 15 years to control year
+            });
+           </script>
+
+ </body>
+ </html>
