@@ -5,10 +5,17 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var http = require('http');
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var mongoose = require('mongoose');
+
+// var postuser = require('./routes/postuser');
 var app = express();
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://127.0.0.1/dentist');
+var db = mongoose.connection;
+db.once('open', () => {
+    console.log("Connected to mongodb database");
+});
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,9 +31,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/users', users);
 
+var home = require('./routes/home.js');
+app.use('/', home);
+
+var search = require('./routes/search.js');
+app.use('/search', search);
+
+var add = require('./routes/add.js');
+app.use('/add', add);
+
+
+console.log("Server Started");
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -59,5 +75,5 @@ app.use(function(err, req, res, next) {
 });
 
 
-//app.listen(3000);
+app.listen(8000);
 module.exports = app;
